@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
   <title>Salsa Dallas — Learn salsa in 4 weeks · Carrollton, TX</title>
-  <meta name="description" content="Beginner salsa classes in Carrollton, TX. No partner, no experience. 4-week courses start the first Tuesday and Thursday of every month at Preciosa Grill. Free classes Wednesdays and Fridays." />
+  <meta name="description" content="Beginner salsa in Carrollton, TX. No partner, no experience. 4-week courses start the first Tuesday and Thursday of every month at Preciosa Grill. Free classes Wednesdays and Fridays." />
+  <meta property="og:title" content="Salsa Dallas — Learn salsa in 4 weeks" />
+  <meta property="og:description" content="Beginner salsa in Carrollton, TX. No partner, no experience. New groups start every month." />
+  <meta property="og:image" content="https://gavin-key.github.io/salsa-dallas-preview/assets/img/Students_Tamplate_email.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#16132b" />
   <link rel="icon" href="assets/img/mainbannerlogo_sm.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,41 +18,45 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
   <div class="concept-bar" id="concept-bar">
-    <span data-i18n="concept">Concept redesign preview. Booking buttons go to the current salsadallas.com checkout.</span>
-    <button type="button" aria-label="Dismiss" onclick="this.parentElement.remove()">×</button>
+    <span data-i18n="concept">Concept redesign preview. Booking buttons open the current salsadallas.com registration pages.</span>
+    <button type="button" aria-label="Dismiss" data-i18n-aria="aria.dismiss" onclick="this.parentElement.remove()">×</button>
   </div>
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a href="#top" class="logo" aria-label="Salsa Dallas home">
+      <a href="#top" class="logo" aria-label="Salsa Dallas home" data-i18n-aria="aria.home">
         <img src="assets/img/SDlogo2026_sm250.png" alt="Salsa Dallas" width="125" height="55" />
       </a>
-      <nav class="main-nav" aria-label="Main">
+      <nav class="main-nav" aria-label="Main" data-i18n-aria="aria.nav">
         <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
-        <a href="#pricing" data-i18n="nav.pricing">Classes &amp; prices</a>
+        <a href="#pricing" data-i18n="nav.pricing">Prices</a>
         <a href="#events" data-i18n="nav.events">Events</a>
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#visit" data-i18n="nav.visit">Locations</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
       <div class="header-actions">
-        <div class="lang" role="group" aria-label="Language">
-          <button type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        <div class="lang" role="group" aria-label="Language" data-i18n-aria="aria.lang">
+          <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false" lang="es">ES</button>
         </div>
-        <a class="btn btn-red btn-sm hide-sm" href="#start" data-i18n="cta.start">Start dancing</a>
+        <a class="btn btn-red btn-sm hide-md" href="#start" data-i18n="cta.start">Start dancing</a>
       </div>
     </div>
   </header>
 
-  <main id="top">
+  <main id="main" tabindex="-1">
+    <span id="top"></span>
     <!-- ───────── HERO ───────── -->
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="hero.eyebrow">Beginner salsa · Carrollton, TX · since 2000</p>
           <h1 data-i18n="hero.title">Learn salsa in 4&nbsp;weeks.</h1>
-          <p class="lede" data-i18n-html="hero.lede">No partner. No experience. One night a week at Preciosa Grill, <strong>Tuesdays or Thursdays at 7&nbsp;PM</strong>.</p>
+          <p class="lede" data-i18n-html="hero.lede">No partner. No experience. One night a week at Preciosa Grill, <strong>Tuesdays or Thursdays at {{courseTime}}</strong>.</p>
 
           <div class="next-card" id="start">
             <div class="next-head">
@@ -56,9 +65,9 @@
             </div>
             <div class="next-options" id="next-options"><!-- filled by app.js --></div>
             <p class="next-price">
-              <span data-i18n-html="hero.price"><strong>$79</strong> for 4 classes</span>
-              <span class="dot">·</span>
-              <span data-i18n-html="hero.promo">First time? <strong>$59</strong> with code <code>STARTSALSA20</code></span>
+              <span data-i18n-html="hero.price"><strong>{{course}}</strong> for 4 classes</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span data-i18n-html="hero.promo">First time? <strong>{{promoPrice}}</strong> with code <code>{{promoCode}}</code></span>
             </p>
             <p class="next-rule" id="next-rule"></p>
           </div>
@@ -67,9 +76,9 @@
         </div>
 
         <figure class="hero-photo">
-          <img src="assets/img/Students_Tamplate_email.jpg" alt="Salsa Dallas beginner students dancing in class" width="833" height="469" />
+          <img src="assets/img/Students_Tamplate_email.jpg" alt="Salsa Dallas beginner students dancing in class" data-i18n-alt="alt.hero" width="833" height="469" />
           <figcaption class="hero-badges">
-            <span>★ 4.9 <small data-i18n="hero.rating">Google rating</small></span>
+            <span>★ 4.9 <small data-i18n="hero.rating">rating</small></span>
             <span data-i18n="hero.badge2">No partner needed</span>
           </figcaption>
         </figure>
@@ -81,14 +90,14 @@
       <div class="wrap">
         <div class="tw-head">
           <h2 id="tw-title" data-i18n="tw.title">Happening this week</h2>
-          <a href="#schedule" class="link" data-i18n="tw.full">Full calendar →</a>
+          <a href="#schedule" class="link" data-open="month" data-i18n="tw.full">Full calendar →</a>
         </div>
         <ol class="tw-list" id="tw-list"><!-- filled by app.js --></ol>
       </div>
     </section>
 
-    <!-- ───────── FEATURED EVENT BANNER ───────── -->
-    <section class="featured-wrap" id="featured"><!-- filled by app.js if an event is within 45 days --></section>
+    <!-- ───────── FEATURED EVENT BANNER (only shows within 45 days of an event) ───────── -->
+    <section class="featured-wrap" id="featured" aria-label="Featured event" data-i18n-aria="aria.featured"></section>
 
     <!-- ───────── HOW IT WORKS ───────── -->
     <section class="section how">
@@ -97,17 +106,17 @@
         <h2 class="center" data-i18n="how.title">Three steps to your first dance</h2>
         <ol class="steps">
           <li>
-            <span class="step-n">1</span>
+            <span class="step-n" aria-hidden="true">1</span>
             <h3 data-i18n="how.s1.t">Pick Tuesday or Thursday</h3>
-            <p data-i18n="how.s1.p">Same course, same teacher, 7–8 PM. Choose the night that fits your week. You’ll come that night for 4 weeks.</p>
+            <p data-i18n="how.s1.p">Same course, same teacher, {{courseRange}}. Choose the night that fits your week. You’ll come that night for 4 weeks.</p>
           </li>
           <li>
-            <span class="step-n">2</span>
+            <span class="step-n" aria-hidden="true">2</span>
             <h3 data-i18n="how.s2.t">Register online before day one</h3>
-            <p data-i18n-html="how.s2.p">New groups start the <strong>first Tuesday and first Thursday of each month</strong>. Everyone starts together, so missed the first class? You’ll join next month’s group.</p>
+            <p data-i18n-html="how.s2.p">New groups start the <strong>first Tuesday and first Thursday of each month</strong>. Everyone starts together, so if you miss the first class you’ll join next month’s group.</p>
           </li>
           <li>
-            <span class="step-n">3</span>
+            <span class="step-n" aria-hidden="true">3</span>
             <h3 data-i18n="how.s3.t">Just show up</h3>
             <p data-i18n="how.s3.p">Come alone or bring friends. We rotate partners, so nobody sits out. Comfortable clothes and shoes are all you need.</p>
           </li>
@@ -123,28 +132,28 @@
             <p class="eyebrow" data-i18n="sch.eyebrow">Schedule</p>
             <h2 data-i18n="sch.title">Every class and social, in one place</h2>
           </div>
-          <div class="tabs" role="tablist">
-            <button role="tab" aria-selected="true" data-view="week" data-i18n="sch.tab.week">Weekly</button>
-            <button role="tab" aria-selected="false" data-view="month" data-i18n="sch.tab.month">Calendar</button>
+          <div class="tabs" role="tablist" aria-label="Schedule view" data-i18n-aria="aria.view">
+            <button type="button" role="tab" id="tab-week" aria-controls="view-week" aria-selected="true" tabindex="0" data-i18n="sch.tab.week">Weekly</button>
+            <button type="button" role="tab" id="tab-month" aria-controls="view-month" aria-selected="false" tabindex="-1" data-i18n="sch.tab.month">Calendar</button>
           </div>
         </div>
 
-        <div class="legend">
+        <div class="legend" aria-hidden="true">
           <span class="lg lg-class" data-i18n="lg.class">Class</span>
           <span class="lg lg-free" data-i18n="lg.free">Free class + social</span>
           <span class="lg lg-event" data-i18n="lg.event">Special event</span>
         </div>
 
-        <div class="view view-week" id="view-week"><!-- filled by app.js --></div>
+        <div class="view view-week" id="view-week" role="tabpanel" aria-labelledby="tab-week"><!-- filled by app.js --></div>
 
-        <div class="view view-month" id="view-month" hidden>
+        <div class="view view-month" id="view-month" role="tabpanel" aria-labelledby="tab-month" hidden>
           <div class="month-bar">
-            <button type="button" class="icon-btn" id="m-prev" aria-label="Previous month">‹</button>
-            <h3 id="m-title">Month</h3>
-            <button type="button" class="icon-btn" id="m-next" aria-label="Next month">›</button>
+            <button type="button" class="icon-btn" id="m-prev" aria-label="Previous month" data-i18n-aria="aria.prev">‹</button>
+            <h3 id="m-title" aria-live="polite">Month</h3>
+            <button type="button" class="icon-btn" id="m-next" aria-label="Next month" data-i18n-aria="aria.next">›</button>
           </div>
           <div class="month-layout">
-            <div class="month-grid" id="m-grid" role="grid"></div>
+            <div class="month-grid" id="m-grid"></div>
             <aside class="day-detail" id="day-detail" aria-live="polite"></aside>
           </div>
         </div>
@@ -162,23 +171,23 @@
             <p class="plan-tag" data-i18n="pr.try.tag">Just curious</p>
             <h3 data-i18n="pr.try.t">Free class at a salsa night</h3>
             <p class="plan-price"><span class="amt" data-i18n="pr.free">Free</span></p>
-            <p class="plan-desc" data-i18n="pr.try.d">A beginner lesson with Luis, then stay and dance. No sign-up, no commitment.</p>
+            <p class="plan-desc" data-i18n="pr.try.d">A beginner lesson with Luis, then stay and dance. No commitment.</p>
             <ul class="checks">
-              <li data-i18n-html="pr.try.l1"><strong>Fridays</strong> · Alexander’s, North Dallas · 10:30 PM</li>
-              <li data-i18n-html="pr.try.l2"><strong>1st &amp; 3rd Wednesdays</strong> · Bombshells, Rowlett · 8 PM</li>
+              <li data-i18n-html="pr.try.l1"><strong>Fridays</strong> · Alexander’s, North Dallas · {{friTime}} ({{friLastTime}} on the last Friday)</li>
+              <li data-i18n-html="pr.try.l2"><strong>{{bayDays}}</strong> · Bombshells, Rowlett · {{bayTime}}</li>
               <li data-i18n="pr.try.l3">Live band or DJ, food &amp; drinks</li>
             </ul>
-            <a class="btn btn-ghost" href="#schedule" data-i18n="pr.try.cta">See dates</a>
+            <a class="btn btn-ghost" href="#schedule" data-open="month" data-i18n="pr.try.cta">See dates</a>
           </article>
 
           <article class="plan plan-hero">
             <p class="plan-tag" data-i18n="pr.course.tag">Best place to start</p>
             <h3 data-i18n="pr.course.t">4-week beginner course</h3>
-            <p class="plan-price"><span class="amt">$79</span> <span class="per" data-i18n="pr.course.per">/ 4 classes</span></p>
-            <p class="promo-pill" data-i18n-html="pr.course.promo">First time? <strong>$59</strong> with <code>STARTSALSA20</code></p>
+            <p class="plan-price"><span class="amt" data-i18n="pr.course.amt">{{course}}</span> <span class="per" data-i18n="pr.course.per">/ 4 classes</span></p>
+            <p class="promo-pill" data-i18n-html="pr.course.promo">First time? <strong>{{promoPrice}}</strong> with <code>{{promoCode}}</code></p>
             <p class="plan-desc" data-i18n="pr.course.d">Timing, basic steps, turns and partner connection, taught step by step. You’ll leave able to dance at a social.</p>
             <ul class="checks">
-              <li data-i18n="pr.course.l1">One night a week: Tue or Thu, 7–8 PM</li>
+              <li data-i18n="pr.course.l1">One night a week: Tue or Thu, {{courseRange}}</li>
               <li data-i18n="pr.course.l2">Preciosa Grill, Carrollton · free parking</li>
               <li data-i18n="pr.course.l3">Missed a class? Ask about a make-up.</li>
             </ul>
@@ -188,7 +197,7 @@
           <article class="plan">
             <p class="plan-tag" data-i18n="pr.unl.tag">Hooked already</p>
             <h3 data-i18n="pr.unl.t">Unlimited monthly</h3>
-            <p class="plan-price"><span class="amt">$100</span> <span class="per" data-i18n="pr.unl.per">/ month</span></p>
+            <p class="plan-price"><span class="amt" data-i18n="pr.unl.amt">{{unlimited}}</span> <span class="per" data-i18n="pr.unl.per">/ month</span></p>
             <p class="plan-desc" data-i18n="pr.unl.d">Come to every Tuesday and Thursday salsa class, all levels. The fastest way to improve.</p>
             <ul class="checks">
               <li data-i18n="pr.unl.l1">Beginner + Intermediate/Advanced</li>
@@ -200,91 +209,53 @@
         </div>
 
         <h3 class="sub-h" data-i18n="pr.more">Also available</h3>
-        <div class="price-table" role="table">
-          <div class="pt-row" role="row">
-            <div role="cell"><strong data-i18n="pr.t.couples">Couples beginner course</strong><span data-i18n="pr.t.couples.d">Two people, 4 Tuesdays at 7 PM</span></div>
-            <div role="cell" class="pt-amt">$100 <small data-i18n="pr.t.percouple">/ couple</small></div>
-            <div role="cell"><a class="link" data-link="couples" data-i18n="pr.book">Book</a></div>
-          </div>
-          <div class="pt-row" role="row">
-            <div role="cell"><strong data-i18n="pr.t.bachata">Bachata beginners</strong><span data-i18n="pr.t.bachata.d">Tuesdays 8 PM with Eddie &amp; Marisela</span></div>
-            <div role="cell" class="pt-amt">$79 <small data-i18n="pr.t.permonth">/ month</small></div>
-            <div role="cell"><a class="link" data-link="bachata" data-i18n="pr.book">Book</a></div>
-          </div>
-          <div class="pt-row" role="row">
-            <div role="cell"><strong data-i18n="pr.t.dropin">Drop-in class</strong><span data-i18n="pr.t.dropin.d">For returning dancers: one Int/Adv or bachata class</span></div>
-            <div role="cell" class="pt-amt">$30</div>
-            <div role="cell"><a class="link" data-link="dropin" data-i18n="pr.book">Book</a></div>
-          </div>
-          <div class="pt-row" role="row">
-            <div role="cell"><strong data-i18n="pr.t.p1">Private lesson</strong><span data-i18n="pr.t.p1.d">1 hour with Luis · +$25 per extra person</span></div>
-            <div role="cell" class="pt-amt">$110</div>
-            <div role="cell"><a class="link" data-link="private1" data-i18n="pr.book">Book</a></div>
-          </div>
-          <div class="pt-row" role="row">
-            <div role="cell"><strong data-i18n="pr.t.p5">5 private lessons</strong><span data-i18n="pr.t.p5.d">Five 1-hour sessions · weddings, fast progress</span></div>
-            <div role="cell" class="pt-amt">$450</div>
-            <div role="cell"><a class="link" data-link="private5" data-i18n="pr.book">Book</a></div>
-          </div>
-          <div class="pt-row" role="row">
-            <div role="cell"><strong data-i18n="pr.t.pg">Group private / party</strong><span data-i18n="pr.t.pg.d">1 hour for your group, team or event</span></div>
-            <div role="cell" class="pt-amt">$600</div>
-            <div role="cell"><a class="link" data-link="privateGroup" data-i18n="pr.book">Book</a></div>
-          </div>
-        </div>
-        <p class="fine" data-i18n="pr.fine">Promo code is valid once per new student on the $79 beginner course and can’t be combined with other offers. Everyone, including cash payers, registers online first.</p>
+        <ul class="price-table">
+          <li class="pt-row">
+            <div><strong data-i18n="pr.t.couples">Couples beginner course</strong><span data-i18n="pr.t.couples.d">Two people, 4 Tuesdays at {{courseTime}}</span></div>
+            <div class="pt-amt" data-i18n-html="pr.t.couples.amt">{{couples}} <small>/ couple</small></div>
+            <div><a class="link" data-link="couples" data-i18n="pr.book">Book</a></div>
+          </li>
+          <li class="pt-row">
+            <div><strong data-i18n="pr.t.bachata">Bachata beginners</strong><span data-i18n="pr.t.bachata.d">Tuesdays {{bachataTime}} with Eddie &amp; Marisela</span></div>
+            <div class="pt-amt" data-i18n-html="pr.t.bachata.amt">{{bachata}} <small>/ month</small></div>
+            <div><a class="link" data-link="bachata" data-i18n="pr.book">Book</a></div>
+          </li>
+          <li class="pt-row">
+            <div><strong data-i18n="pr.t.dropin">Drop-in class</strong><span data-i18n="pr.t.dropin.d">One Intermediate/Advanced salsa class, Thursdays {{iaTime}}</span></div>
+            <div class="pt-amt" data-i18n="pr.t.dropin.amt">{{dropin}}</div>
+            <div><a class="link" data-link="dropin" data-i18n="pr.book">Book</a></div>
+          </li>
+          <li class="pt-row">
+            <div><strong data-i18n="pr.t.p1">Private lesson</strong><span data-i18n="pr.t.p1.d">1 hour with Luis · +{{privateExtra}} per extra person</span></div>
+            <div class="pt-amt" data-i18n="pr.t.p1.amt">{{private1}}</div>
+            <div><a class="link" data-link="private1" data-i18n="pr.book">Book</a></div>
+          </li>
+          <li class="pt-row">
+            <div><strong data-i18n="pr.t.p5">5 private lessons</strong><span data-i18n="pr.t.p5.d">Five 1-hour sessions · weddings, fast progress</span></div>
+            <div class="pt-amt" data-i18n="pr.t.p5.amt">{{private5}}</div>
+            <div><a class="link" data-link="private5" data-i18n="pr.book">Book</a></div>
+          </li>
+          <li class="pt-row">
+            <div><strong data-i18n="pr.t.pg">Group private / party</strong><span data-i18n="pr.t.pg.d">1 hour for your group, team or event</span></div>
+            <div class="pt-amt" data-i18n="pr.t.pg.amt">{{privateGroup}}</div>
+            <div><a class="link" data-link="privateGroup" data-i18n="pr.book">Book</a></div>
+          </li>
+        </ul>
+        <p class="fine" data-i18n="pr.fine">The promo code works once per new student on the {{course}} beginner course and can’t be combined with other offers. Everyone, including cash payers, registers online first.</p>
       </div>
     </section>
 
-    <!-- ───────── EVENTS ───────── -->
+    <!-- ───────── EVENTS (cards built from data.js) ───────── -->
     <section class="section events" id="events">
       <div class="wrap">
         <p class="eyebrow" data-i18n="ev.eyebrow">Go dancing</p>
         <h2 data-i18n="ev.title">Where to practice what you learn</h2>
-
-        <div class="ev-grid">
-          <article class="ev-card ev-congress">
-            <img src="assets/img/DSC2026main.jpg" alt="Packed ballroom at the Dallas Salsa Congress" loading="lazy" width="1536" height="1024" />
-            <div class="ev-body">
-              <p class="ev-when" data-i18n="ev.dsc.when">Nov 20–22, 2026 · Coppell, near DFW Airport</p>
-              <h3 data-i18n="ev.dsc.t">Dallas Salsa Congress 2026</h3>
-              <p data-i18n="ev.dsc.d">The 16th annual weekend: workshops for every level, world-class shows and two nights of social dancing until 3 AM.</p>
-              <div class="btn-row">
-                <a class="btn btn-gold" data-link="congress" data-i18n="ev.dsc.cta">Get passes · from $155</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="ev-card">
-            <img src="assets/img/dance-studio-photos.jpg" alt="Friday Salsa Night at Alexander's flyer" loading="lazy" width="1254" height="1254" />
-            <div class="ev-body">
-              <p class="ev-when" data-i18n="ev.fri.when">Every Friday · North Dallas</p>
-              <h3 data-i18n="ev.fri.t">Salsa Friday at Alexander’s</h3>
-              <p data-i18n="ev.fri.d">Free beginner class with Luis at 10:30 PM (9 PM on the last Friday of the month), then live music from Rodrigo Mondragón and DJ Ruben Reyes.</p>
-              <a class="link" href="https://www.google.com/maps/dir/?api=1&destination=4805+Frankford+Rd+Ste+105,+Dallas,+TX+75287" target="_blank" rel="noopener" data-i18n="ev.dir">Directions →</a>
-            </div>
-          </article>
-
-          <article class="ev-card">
-            <img src="assets/img/salsa-by-the-bay-nov-2026_02.jpg" alt="Salsa by the Bay flyer, Bombshells Rowlett" loading="lazy" width="900" height="900" />
-            <div class="ev-body">
-              <p class="ev-when" data-i18n="ev.bay.when">1st &amp; 3rd Wednesdays · Rowlett</p>
-              <h3 data-i18n="ev.bay.t">Salsa by the Bay</h3>
-              <p data-i18n="ev.bay.d">Free class at 8 PM by Lake Ray Hubbard, then salsa, bachata and merengue until midnight.</p>
-              <a class="link" data-link="bay" data-i18n="ev.bay.cta">Reserve your free spot →</a>
-            </div>
-          </article>
-        </div>
-
+        <div class="ev-grid" id="ev-grid"></div>
         <div class="ev-extra">
-          <div class="save-date">
-            <p class="ev-when" data-i18n="ev.bach.when">Apr 9–11, 2027</p>
-            <h3 data-i18n="ev.bach.t">Bachatéame Congress 2027</h3>
-            <p data-i18n="ev.bach.d">Save the date. Tickets coming soon.</p>
-          </div>
+          <div class="ev-later" id="ev-later"></div>
           <div class="community">
             <h3 data-i18n="ev.comm.t">More socials around DFW</h3>
-            <ul id="community-list"><!-- filled by app.js --></ul>
+            <ul id="community-list"></ul>
           </div>
         </div>
       </div>
@@ -294,14 +265,14 @@
     <section class="section about" id="about">
       <div class="wrap about-grid">
         <div class="about-photo">
-          <img src="assets/img/luis_delgadillo_2025.png" alt="Luis Delgadillo, founder of Salsa Dallas" loading="lazy" width="349" height="861" />
+          <img src="assets/img/luis_delgadillo_2025.png" alt="Luis Delgadillo, founder of Salsa Dallas" data-i18n-alt="alt.luis" loading="lazy" width="349" height="861" />
         </div>
         <div class="about-copy">
           <p class="eyebrow" data-i18n="ab.eyebrow">Your teacher</p>
           <h2 data-i18n="ab.title">Luis Delgadillo has taught Dallas to dance since 2000.</h2>
-          <p data-i18n="ab.p1">Luis founded Salsa Dallas and organizes the Dallas Salsa Congress. In 25+ years he’s taught thousands of first-timers, from people who “can’t dance” to wedding couples to experienced dancers polishing technique. His classes are patient, structured and a lot of fun.</p>
+          <p class="about-p" data-i18n="ab.p1">Luis founded Salsa Dallas and organizes the Dallas Salsa Congress. In 25+ years he’s taught thousands of first-timers, from people who “can’t dance” to wedding couples to experienced dancers polishing technique. His classes are patient, structured and a lot of fun.</p>
           <p class="as-seen"><span data-i18n="ab.seen">As seen on</span> <b>NBC 5</b> <b>CBS 11</b> <b>WFAA 8</b></p>
-          <div class="reviews" id="reviews"><!-- filled by app.js --></div>
+          <div class="reviews" id="reviews"></div>
         </div>
       </div>
     </section>
@@ -313,26 +284,26 @@
         <h2 data-i18n="vi.title">Where we dance</h2>
         <div class="venues">
           <article class="venue venue-main">
-            <img src="assets/img/class_schedule-2.jpg" alt="Salsa class on the dance floor at Preciosa Grill" loading="lazy" width="1290" height="1353" />
+            <img src="assets/img/class_schedule-2.jpg" alt="Salsa class on the dance floor at Preciosa Grill" data-i18n-alt="alt.preciosa" loading="lazy" width="800" height="839" />
             <div>
               <p class="venue-tag lg-class" data-i18n="vi.pre.tag">Classes · Tue &amp; Thu</p>
               <h3>Preciosa Grill</h3>
-              <p>3128 E Trinity Mills Rd<br />Carrollton, TX 75006</p>
+              <p data-venue="preciosa"></p>
               <p class="venue-note" data-i18n="vi.pre.note">Venezuelan restaurant with a real dance floor and free parking. Grab dinner before class (no outside food or drinks, please).</p>
-              <a class="link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Preciosa+Grill+3128+E+Trinity+Mills+Rd+Carrollton+TX+75006" data-i18n="ev.dir">Directions →</a>
+              <a class="link" data-map="preciosa" data-i18n="ev.dir">Directions →</a>
             </div>
           </article>
           <article class="venue">
             <p class="venue-tag lg-free" data-i18n="vi.alex.tag">Free class · Fridays</p>
             <h3>Alexander’s Cantina &amp; Cocina</h3>
-            <p>4805 Frankford Rd, Suite 105<br />Dallas, TX 75287</p>
-            <a class="link" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=4805+Frankford+Rd+Ste+105,+Dallas,+TX+75287" data-i18n="ev.dir">Directions →</a>
+            <p data-venue="alexanders"></p>
+            <a class="link" data-map="alexanders" data-i18n="ev.dir">Directions →</a>
           </article>
           <article class="venue">
-            <p class="venue-tag lg-free" data-i18n="vi.bay.tag">Free class · 1st &amp; 3rd Wed</p>
+            <p class="venue-tag lg-free" data-i18n="vi.bay.tag">Free class · {{bayDays}}</p>
             <h3>Bombshells Restaurant &amp; Bar</h3>
-            <p>8524 Meigan Elise Dr<br />Rowlett, TX 75088</p>
-            <a class="link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bombshells+8524+Meigan+Elise+Dr+Rowlett+TX+75088" data-i18n="ev.dir">Directions →</a>
+            <p data-venue="bombshells"></p>
+            <a class="link" data-map="bombshells" data-i18n="ev.dir">Directions →</a>
           </article>
         </div>
       </div>
@@ -345,7 +316,7 @@
         <details><summary data-i18n="faq.q1">Do I need a partner?</summary><p data-i18n="faq.a1">No. Most people come alone. We rotate partners during class so everyone practices with everyone.</p></details>
         <details><summary data-i18n="faq.q2">I’ve never danced. Is that OK?</summary><p data-i18n="faq.a2">That’s exactly who the beginner course is for. Many students start out nervous; the group is friendly and goes step by step.</p></details>
         <details><summary data-i18n="faq.q3">What if I miss the first class of the month?</summary><p data-i18n="faq.a3">Because everyone in a group learns together, new students have to start on day one. If you miss it, you’ll be moved to next month’s group. Already enrolled and miss a later class? Ask Luis about a make-up class.</p></details>
-        <details><summary data-i18n="faq.q4">Tuesday or Thursday, which is better?</summary><p data-i18n="faq.a4">They’re the same beginner course. Pick the night that works. Tuesday is followed by bachata at 8 PM; Thursday by Intermediate/Advanced salsa.</p></details>
+        <details><summary data-i18n="faq.q4">Tuesday or Thursday, which is better?</summary><p data-i18n="faq.a4">They’re the same beginner course. Pick the night that works. Tuesday is followed by bachata at {{bachataTime}}; Thursday by Intermediate/Advanced salsa at {{iaTime}}.</p></details>
         <details><summary data-i18n="faq.q5">What should I wear?</summary><p data-i18n="faq.a5">Comfortable clothes and shoes that turn easily (avoid sneakers with heavy grip). No dance shoes required.</p></details>
         <details><summary data-i18n="faq.q6">Can I pay cash?</summary><p data-i18n="faq.a6">Please register online first so we can save your spot. If you’ve already paid in cash, don’t pay again; just text us and we’ll confirm.</p></details>
       </div>
@@ -364,16 +335,16 @@
   <footer class="site-footer" id="contact">
     <div class="wrap foot-grid">
       <div>
-        <img src="assets/img/SDlogo2026_sm250.png" alt="Salsa Dallas" width="125" height="55" />
+        <img src="assets/img/SDlogo2026_sm250.png" alt="Salsa Dallas" width="125" height="55" loading="lazy" />
         <p data-i18n="ft.tag">Salsa &amp; bachata classes and events across Dallas–Fort Worth since 2000.</p>
       </div>
       <div>
-        <h4 data-i18n="ft.contact">Talk to us</h4>
-        <p><a href="sms:+12149239404" data-i18n="ft.text">Call, text or WhatsApp</a><br /><a href="tel:+12149239404">(214) 923-9404</a></p>
-        <p><a href="mailto:Luis@SalsaDallas.com">Luis@SalsaDallas.com</a></p>
+        <h2 class="foot-h" data-i18n="ft.contact">Talk to us</h2>
+        <p><a data-contact="sms" data-i18n="ft.text">Call, text or WhatsApp</a><br /><a data-contact="tel" data-i18n="ft.phone">{{phone}}</a></p>
+        <p><a data-contact="email" data-i18n="ft.email">{{email}}</a></p>
       </div>
       <div>
-        <h4 data-i18n="ft.follow">Follow</h4>
+        <h2 class="foot-h" data-i18n="ft.follow">Follow</h2>
         <p class="socials">
           <a href="https://www.instagram.com/salsadallas" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/SalsaDallas/" target="_blank" rel="noopener">Facebook</a>
@@ -382,9 +353,9 @@
         </p>
       </div>
       <div>
-        <h4 data-i18n="ft.news">Never miss a social</h4>
+        <h2 class="foot-h" data-i18n="ft.news">Never miss a social</h2>
         <p data-i18n="ft.news.d">Classes, socials and congress news in your inbox.</p>
-        <a class="btn btn-ghost btn-sm" href="https://salsadallas.com/salsa-dallas-updates-mantente-conectado/" target="_blank" rel="noopener" data-i18n="ft.news.cta">Get updates</a>
+        <a class="btn btn-ghost btn-sm" data-link="newsletter" data-i18n="ft.news.cta">Get updates</a>
       </div>
     </div>
     <p class="wrap copyright">© <span id="year"></span> Salsa Dallas · Carrollton, TX</p>
@@ -392,8 +363,8 @@
 
   <!-- Mobile sticky action bar -->
   <div class="mobile-bar">
-    <a href="sms:+12149239404" class="mb-text" data-i18n="mb.text">Text us</a>
-    <a href="#start" class="mb-cta" id="mb-cta">Start Dec 1</a>
+    <a data-contact="sms" class="mb-text" data-i18n="mb.text">Text us</a>
+    <a href="#start" class="mb-cta" id="mb-cta">Start</a>
   </div>
 
   <script src="assets/js/data.js"></script>
